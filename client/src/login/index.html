@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content = "IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/examples/js/controls/OrbitControls.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+    <script src="https://cdn.skypack.dev/three@0.138.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.131.2/build/three.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Signin-Signup</title>
+    
+</head>
+<body>    
+    <canvas id="background"></canvas> 
+    <div class="container">
+       <div class="Signin-Signup">
+        <form action="" class="sign-in-form">
+            <h2 class="title">Sign in</h2>
+            <div class="input-field">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Username">
+            </div>
+            <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Password">
+            </div>
+            <input  type="submit" value="Login" class="btn">
+            <p class="social-text">Or Sign in with other social media platforms</p>
+            <div class="social-media">
+                <a href="#" class="social-icon">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="" class="social-icon">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="" class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+            <P class="account-text">Don't have an account?<a href="#" id="sign-up-btn2">Sign up</a></P>
+        </form>
+        <form action="" class="sign-up-form">
+            <h2 class="title">Sign up</h2>
+            <div class="input-field">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Username">
+            </div>
+            <div class="input-field">
+                <i class="fas fa-envelope"></i>
+                <input type="text" placeholder="Email">
+            </div>
+            <div class="input-field">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Password">
+            </div>
+            <input  type="submit" value="Sign up" class="btn">
+            <p class="social-text">Or Sign in with social platforms</p>
+            <div class="social-media">
+                <a href="#" class="social-icon">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="" class="social-icon">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="" class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+            <P class="account-text">Already have an account?<a href="#" id="sign-in-btn2">Sign in</a></P>
+        </form>
+       </div> 
+       <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>Already a member?</h3>
+                    <p> Sign in </p>
+                    <button class="btn" id="sign-in-btn">Sign in</button>
+            </div>
+            <img src="signin.svg" alt="" class="image">
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>New here?</h3>
+                    <p> Sign up</p>
+                    <button class="btn" id="sign-up-btn">Sign up</button>
+            </div>
+            <img src="signup.svg" alt="" class="image">
+            </div>
+       </div>
+    </div>
+   
+    
+    <script>
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('background') });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+        const geometry = new THREE.PlaneGeometry(window.innerWidth / window.innerHeight * 10, 10);
+        const texture = new THREE.TextureLoader().load('HD-wallpaper-mahadev-lord-shiva-shiva-hindu-bhakti-devotional-god.jpg');
+        const material = new THREE.MeshBasicMaterial({ map: texture });
+
+        const plane = new THREE.Mesh(geometry, material);
+        scene.add(plane);
+
+        camera.position.z = 5;
+
+        function animate() {
+            requestAnimationFrame(animate);
+            renderer.render(scene, camera);
+        }
+
+        animate();
+
+        window.addEventListener('resize', () => {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            renderer.setSize(width, height);
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix();
+            plane.geometry = new THREE.PlaneGeometry(width / height * 10, 10);
+        });
+    </script>
+    <script src="app.js"></script>
+    
+    
+</body>
+</html>
