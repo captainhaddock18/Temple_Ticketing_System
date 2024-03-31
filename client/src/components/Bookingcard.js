@@ -9,7 +9,7 @@ export default function Bookingcard(props) {
       <div class="card-body">
         <h5 class="card-title">{props.title}</h5>
         <p class="card-text">{props.text}</p>
-        <a href="#" class="btn btn-primary">Book Now!</a>
+        <a href="/bookingform" class="btn btn-primary">Book Now!</a>
       </div>
     </div>
     
