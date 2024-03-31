@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import Header from '../components/header'
-
+import { withRouter } from 'react-router-dom'; // Import withRouter HOC
 export default function Bookingform(props) {
+
 
     const [formData, setFormData] = useState({
         name: '',
@@ -35,6 +36,9 @@ export default function Bookingform(props) {
           .catch(error => {
             console.error('Error sending form data to server:', error);
           });
+
+          localStorage.setItem('formData', JSON.stringify(formData));
+          window.location.href = '/ticket';
       };
 
 

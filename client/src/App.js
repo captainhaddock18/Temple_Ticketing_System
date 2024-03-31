@@ -8,6 +8,7 @@ import Booking from './screens/Booking'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Bookingform from './screens/Bookingform'
+import Ticket from './screens/Ticket'
 
 export default function App() {
 
@@ -34,6 +35,7 @@ return (
         <Route exact path='/booking' element={<Booking/>}/>
         <Route exact path='/register' element={<Register/>}/>
         <Route exact path='/bookingform' element={<Bookingform/>}/>
+        <Route exact path='/ticket' element={<Ticket/>}/>
         <Route exact path='*' element={<Notfound/>}/>
       </Routes>
     </div>
