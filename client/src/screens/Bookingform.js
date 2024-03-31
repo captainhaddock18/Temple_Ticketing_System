@@ -64,20 +64,20 @@ export default function Bookingform(props) {
 
       <form id="bookingForm" action="#" method=""  onSubmit={handleSubmit} class="needs-validation" novalidate autocomplete="off">
          
-        <div class="form-group">
+        <div class="row"> 
           <label for="inputName">Name</label>
           <input type="text" class="form-control" id="inputName" name="name" placeholder="Your name" value={formData.name} onChange={handleChange} required />
           <small class="form-text text-muted">Please fill your name</small>
         </div>
 
-        <div class="form-group">
+        <div class="row">
           <label for="inputEmail">Email</label>
           <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Enter email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" value={formData.email} onChange={handleChange} required />
           <small class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
 
 
-        <div class="form-group">
+        <div class="row">
           <label for="inputPhone">Phone</label>
           <input type="tel" class="form-control" id="inputPhone" name="phone" placeholder="099xxxxxxx" pattern="\d{3}\d{3}\d{4}" value={formData.phone} onChange={handleChange} required />
           <small class="form-text text-muted">We'll never share your phone number with anyone else.</small>
@@ -89,6 +89,7 @@ export default function Bookingform(props) {
             <label for="inputDate">Date</label>
             <input type="date" class="form-control" id="inputDate" name="date" value={formData.date} onChange={handleChange} required />
             <small class="form-text text-muted">Please choose date and time for meeting.</small>
+          </div>
           </div>
 
 
@@ -118,7 +119,7 @@ export default function Bookingform(props) {
 
      
 
-        </div>
+      
 
 
 

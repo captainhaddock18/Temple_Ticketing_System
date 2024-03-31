@@ -21,7 +21,7 @@ export default function Header(){
                 <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                 <li><Link className="nav-link" aria-current="page" to="/" style={{color : 'white'}}>Home</Link></li>
                 <li><Link className="nav-link active" aria-current="page" to="/booking" style={{color : 'white'}}>Ticket-Booking</Link></li>
-                <li><Link className="nav-link active" aria-current="page" to="/booking" style={{color : 'white'}}>Check-Availability</Link></li>
+                {/* <li><Link className="nav-link active" aria-current="page" to="/booking" style={{color : 'white'}}>Check-Availability</Link></li> */}
                 <li><Link className="nav-link active" aria-current="page" to="/" style={{color : 'white'}}>Updates</Link></li>
                 <li><Link className="nav-link active" aria-current="page" to="/" style={{color : 'white'}}>About</Link></li>
                 </ul>   
