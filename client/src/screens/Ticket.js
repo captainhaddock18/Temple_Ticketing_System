@@ -53,7 +53,7 @@ export default function ETicketPage() {
             <p className="typewriter">Temple: {formData.temple}</p>
             <p className="typewriter">Date: {formData.date}</p>
             <p className="typewriter">People: {formData.people}</p>
-            <p className="typewriter">Time: {formData.startHour}+{formData.startMinute}</p>
+            <p className="typewriter">Time: {formData.startHour}:{formData.startMinute}</p>
             {/* Display other form data fields as needed */}
           </div>
         )}
