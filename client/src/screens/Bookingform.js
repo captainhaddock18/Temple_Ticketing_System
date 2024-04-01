@@ -60,41 +60,43 @@ export default function Bookingform(props) {
 
   <div class="card">
 
-    <div class="card-body">
+    <div class="card-body p-4">
 
       <form id="bookingForm" action="#" method=""  onSubmit={handleSubmit} class="needs-validation" novalidate autocomplete="off">
          
         <div class="row"> 
+          <div class = "container p-2"> 
           <label for="inputName">Name</label>
           <input type="text" class="form-control" id="inputName" name="name" placeholder="Your name" value={formData.name} onChange={handleChange} required />
           <small class="form-text text-muted">Please fill your name</small>
-        </div>
+          </div>
 
-        <div class="row">
+          <div class = "container p-2"> 
           <label for="inputEmail">Email</label>
           <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Enter email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" value={formData.email} onChange={handleChange} required />
           <small class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
+          </div>
 
 
-        <div class="row">
+          <div class = "container p-2"> 
           <label for="inputPhone">Phone</label>
           <input type="tel" class="form-control" id="inputPhone" name="phone" placeholder="099xxxxxxx" pattern="\d{3}\d{3}\d{4}" value={formData.phone} onChange={handleChange} required />
           <small class="form-text text-muted">We'll never share your phone number with anyone else.</small>
-        </div>
+          </div>
+        
 
-        <div class="form-row">
-
-          <div class="form-group col-md-4">
+ 
+          <div class="row">
+          <div class="form-group col-md-7 p-2">
             <label for="inputDate">Date</label>
             <input type="date" class="form-control" id="inputDate" name="date" value={formData.date} onChange={handleChange} required />
             <small class="form-text text-muted">Please choose date and time for meeting.</small>
+
           </div>
           </div>
-
-
-
-          <div class="form-group col-md-4">
+          
+          <div class="row">
+          <div class="form-group col-md-4 p-2">
             <label>Choose Time</label>
             <div class="d-flex flex-row justify-content-between align-items-center">
               <select class="form-control mr-1" id="inputStartTimeHour" name="startHour" value={formData.startHour} onChange={handleChange} required>
@@ -116,10 +118,9 @@ export default function Bookingform(props) {
               </select>
             </div>
           </div>
-
+          </div>
      
-
-      
+          </div>
 
 
 
@@ -142,7 +143,7 @@ export default function Bookingform(props) {
 
   <footer>
     <div class="my-4 text-muted text-center">
-      <p>© Tharak and varshit company</p>
+      <p>© Tharak and Varshit company</p>
     </div>
   </footer>
 

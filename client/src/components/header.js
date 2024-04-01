@@ -6,11 +6,17 @@ export default function Header(){
     <div className="sticky-top">
         <div style={{ backgroundColor: '#008DDA'}}>
             <div className="navbar navbar-expand-lg " style={{ backgroundColor: '#41C9E2', height: 60, borderRadius: '0 0 50px 50px', boxShadow: '0px 0px 10px 10px rgba(0,0,0,0.2)'}}>
+            
             <div className="container">
-                <div className = "row">
+                <div className = "row col-6">
                 <Link className="nav-link active" aria-current="page" to="/">Ticketing System</Link>
                 </div>
+                <div className='container flex justify-content-center align-items-center'>
+            <img src="https://e7.pngegg.com/pngimages/737/429/png-clipart-brass-colored-decor-illustration-tirumala-venkateswara-temple-lords-mobile-krishna-shiva-ganesha-lord-krishna-gold-metal-thumbnail.png" alt="network-logo" width="60" height="60" />
+
             </div>
+            </div>
+            
             </div>
             <div className="navbar navbar-expand-lg"style={{color: 'white'}}>
             <div className="container">
