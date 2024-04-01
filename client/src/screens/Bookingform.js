@@ -10,8 +10,10 @@ export default function Bookingform(props) {
         phone: '',
         temple: props.temple,
         date: '',
+        people: '',
         startHour: '',
-        startMinute: ''
+        startMinute: '',
+        
       });
     
       const handleChange = (e) => {
@@ -94,9 +96,27 @@ export default function Bookingform(props) {
 
           </div>
           </div>
+
+          <div class="row">
+          <div class="form-group col-md-7 p-2">
+            <label>Choose number of people</label>
+           
+            <select class="form-control mr-1" id="people" name="people" value={formData.people} onChange={handleChange} required>
+  <option value="" disabled selected>Upto 5</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="1">4</option>
+  <option value="2">5</option>
+  {/* Add more options as needed */}
+</select>
+
+            
+     </div>
+     </div>
           
           <div class="row">
-          <div class="form-group col-md-4 p-2">
+          <div class="form-group col-md-10 p-10">
             <label>Choose Time</label>
             <div class="d-flex flex-row justify-content-between align-items-center">
               <select class="form-control mr-1" id="inputStartTimeHour" name="startHour" value={formData.startHour} onChange={handleChange} required>
@@ -125,15 +145,15 @@ export default function Bookingform(props) {
 
 
 
+
+
         <hr />
 
-   
-
-
+      
          
 
          
-        <button class="btn btn-primary btn-block col-lg-2" type="submit">Submit</button>
+        <button class="btn btn-primary btn-block col-lg-5" type="submit">Submit</button>
          
       </form>
        

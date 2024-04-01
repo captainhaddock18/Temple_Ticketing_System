@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+import QRCode from 'react-qr-code'; // Import QRCode component
 import './ticket.css'
 export default function ETicketPage() {
   const [formData, setFormData] = useState(null);
@@ -27,6 +28,13 @@ export default function ETicketPage() {
 
       // Add image to PDF
       pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+      const pdfBase64 = btoa(pdf.output()); // Convert PDF output to Base64 string
+
+      // Generate QR code with PDF Base64 string as content
+      const qrDataUrl = `data:image/png;base64,${pdfBase64}`;
+      const qrImg = document.createElement('img');
+      qrImg.src = qrDataUrl;
+      document.body.appendChild(qrImg);
 
       // Download PDF
       pdf.save('e-ticket.pdf');
@@ -44,11 +52,13 @@ export default function ETicketPage() {
             <p className="typewriter">Phone: {formData.phone}</p>
             <p className="typewriter">Temple: {formData.temple}</p>
             <p className="typewriter">Date: {formData.date}</p>
+            <p className="typewriter">People: {formData.people}</p>
             <p className="typewriter">Time: {formData.startHour}+{formData.startMinute}</p>
             {/* Display other form data fields as needed */}
           </div>
         )}
       </div>
+      <QRCode value={JSON.stringify(formData)} /> {/* Render QR code with form data */}
       <button onClick={generatePDF}>Download PDF</button>
     </div>
   );
