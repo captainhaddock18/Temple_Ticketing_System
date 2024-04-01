@@ -24,8 +24,10 @@ const userSchema = new mongoose.Schema({
   phone: Number, 
   temple: String,
   date: String, 
+  people: String,
   startHour: Number,
-  startMinute: Number 
+  startMinute: Number ,
+
 });
 
 const user = mongoose.model("tickets", userSchema);
@@ -48,15 +50,17 @@ app.get('/booking', (req, res)=>{
 })
 
 app.post('/api/booking', (req, res) => {
-    const {name , email , phone , temple, date , startHour, startMinute} = req.body;
+    const {name , email , phone , temple, date , people , startHour, startMinute} = req.body;
     user.create({
         name: name,
         email: email, 
         phone: phone,
         temple: temple, 
         date: date, 
+        people: people,
         startHour: startHour, 
-        startMinute: startMinute
+        startMinute: startMinute,
+
     })
     res.end();
     
