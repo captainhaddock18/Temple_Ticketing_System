@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/Temple_Ticketing_System/static/css/main.41882019.css",
+    "main.js": "/Temple_Ticketing_System/static/js/main.bf8b8e71.js",
+    "static/js/213.c8de926f.chunk.js": "/Temple_Ticketing_System/static/js/213.c8de926f.chunk.js",
+    "static/js/732.fe57fed0.chunk.js": "/Temple_Ticketing_System/static/js/732.fe57fed0.chunk.js",
+    "static/js/453.258b012d.chunk.js": "/Temple_Ticketing_System/static/js/453.258b012d.chunk.js",
+    "static/media/tirupati.jpg": "/Temple_Ticketing_System/static/media/tirupati.2ca40363980e3e42f41d.jpg",
+    "static/media/yadagirigutta.avif": "/Temple_Ticketing_System/static/media/yadagirigutta.b0369a81ada852edbcbd.avif",
+    "static/media/basara.jpg": "/Temple_Ticketing_System/static/media/basara.3b301012007a3038e240.jpg",
+    "static/media/signup.svg": "/Temple_Ticketing_System/static/media/signup.c350ff497019c2bbc56bf7c0e1b70cdd.svg",
+    "static/media/ayodhya.avif": "/Temple_Ticketing_System/static/media/ayodhya.ae3cc533201d5cc3a082.avif",
+    "static/media/kedarnath.jpeg": "/Temple_Ticketing_System/static/media/kedarnath.c7d4bd42832452788c17.jpeg",
+    "static/media/varanasi.jpeg": "/Temple_Ticketing_System/static/media/varanasi.a04c221d7c6ad1326119.jpeg",
+    "static/media/sun_temple.jpeg": "/Temple_Ticketing_System/static/media/sun_temple.e527f66ebb7bec37dce4.jpeg",
+    "static/media/signin.svg": "/Temple_Ticketing_System/static/media/signin.f05b1f7622fe675c8b10044ce641e388.svg",
+    "index.html": "/Temple_Ticketing_System/index.html",
+    "main.41882019.css.map": "/Temple_Ticketing_System/static/css/main.41882019.css.map",
+    "main.bf8b8e71.js.map": "/Temple_Ticketing_System/static/js/main.bf8b8e71.js.map",
+    "213.c8de926f.chunk.js.map": "/Temple_Ticketing_System/static/js/213.c8de926f.chunk.js.map",
+    "732.fe57fed0.chunk.js.map": "/Temple_Ticketing_System/static/js/732.fe57fed0.chunk.js.map",
+    "453.258b012d.chunk.js.map": "/Temple_Ticketing_System/static/js/453.258b012d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.41882019.css",
+    "static/js/main.bf8b8e71.js"
+  ]
+}
